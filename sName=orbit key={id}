@@ -1,0 +1,30 @@
+[33mcommit 4991b7a6393461b89a816b689ed4b7845022f85d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 931ffae 2b5f4db
+Author: Mateus <137577094+mStof@users.noreply.github.com>
+Date:   Sat Feb 24 18:00:38 2024 -0300
+
+    Merge branch 'master' of https://github.com/mStof/coffee-stellar
+
+[33mcommit 931ffaeacc4b0a2a46d6be0f69163406b1cf208d[m
+Author: Mateus <137577094+mStof@users.noreply.github.com>
+Date:   Sat Feb 24 17:53:24 2024 -0300
+
+    style(svg names): renaming svgs names to build confg on github pages
+
+[33mcommit 2b5f4db023159da790cb2f3847f00014624fb6fc[m
+Author: Mateus <mateus.stofel.brito@gmail.com>
+Date:   Sat Feb 24 17:38:49 2024 -0300
+
+    Create nextjs.yml
+
+[33mcommit 52f982b2cfb2ba82c7235ac169919b98ecb80ed7[m
+Author: Mateus <137577094+mStof@users.noreply.github.com>
+Date:   Sat Feb 24 17:26:41 2024 -0300
+
+    feat(create): the first commit to up the website in github, this isn't a final ver
+
+[33mcommit 8628873d00e734d4c309507392122e7fba6abd0d[m
+Author: Mateus <137577094+mStof@users.noreply.github.com>
+Date:   Tue Jan 30 12:47:26 2024 -0300
+
+    Initial commit from Create Next App
