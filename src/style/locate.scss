@@ -1,0 +1,67 @@
+@use './style.scss' as color;
+
+div.locate_container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-inline: calc(120px + 85px) 120px;
+
+    div.locate_info{
+        margin-top: .5rem;
+        // background-color: blue;
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            font-size: 6.5rem;
+            color: color.$thirdy-color;
+            font-weight: 400;
+            margin-bottom: 29px;
+        }
+        ul{
+            margin-left: 1rem;
+            list-style: none;
+            font-family: var(--besley-font);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+
+            li{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            &.locate_redes_sociais{
+                margin-top: 27px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 16px;
+
+                li{
+                    background-color: color.$secondy-color;
+                    border-radius: 10px;
+                    padding: 11px;
+                    position: relative;
+                    transition: transform 500ms;
+                    
+                    a{
+                        display: inline-block;
+                        *{ display: block; }
+                    }
+
+                    &:hover{
+                        transform: translateY(-16px);
+                        transition: transform 200ms;
+                    }
+                }
+            }
+        }
+
+    }
+}

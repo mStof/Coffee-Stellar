@@ -1,0 +1,51 @@
+@use "./style.scss" as color;
+
+main.container_principal{
+    align-self: center;
+    width:100%;
+    padding: 37px 0px;
+    padding-inline: 80px calc(80px + 85px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 80px;
+
+    .container_info{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h1.container_title{
+            color: color.$thirdy-color;
+            font-size: 7rem;
+            font-weight: 400;
+            
+        }
+        p.container-description{
+            margin-left: 16px;
+            color: color.$thirdy-color;
+            font-size: 2.5rem;
+        }
+        button.know_btn{
+            margin-left: 16px;
+            background-color: color.$secondy-color;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            padding: 9px 32px;
+            display: grid;
+            place-content: center;
+
+            color: color.$primary-color;
+            font-family: var(--lobster-font);
+            font-size: 1.8rem;
+            
+        }
+    }
+    
+}
