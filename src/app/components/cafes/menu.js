@@ -29,7 +29,7 @@ export default function CoffeeMenu() {
     <div className="coffee_container" onClick={test}>
       {coffees.map(({ id, coffeeName, forca, acidez, amargor }) => {
         return (
-          <div className="orbit" key={coffeeName}>
+          <div className="orbit" key={id}>
             <Coffee
               coffeeName={coffeeName}
               forca={forca}
