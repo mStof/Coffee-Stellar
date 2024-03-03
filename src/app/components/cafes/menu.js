@@ -1,5 +1,5 @@
 "use client";
-import sun from "../../../../public/svg/sun.svg";
+import assets from "../assets";
 import Image from "next/image";
 import Coffee from "./coffee";
 
@@ -40,7 +40,7 @@ export default function CoffeeMenu() {
           </div>
         );
       })}
-      <Image className="sun_svg" src={sun} alt="Sun image"></Image>
+      <Image className="sun_svg" src={assets.menuJs} alt="Sun image"></Image>
     </div>
   );
 }

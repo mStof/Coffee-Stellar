@@ -1,9 +1,9 @@
 import Image from "next/image";
-import starFull from "../../../../public/svg/full-star.svg";
-import starEmpty from "../../../../public/svg/empty-star.svg";
+import assets from "../assets";
 import PropTypes from "prop-types";
 
 export default function Stars({rating}) {
+  const [ starEmpty, starFull ] = assets.starsJs
   const starImages = [];
   for (let i = 1; i < 6; i++) {
     starImages.push(

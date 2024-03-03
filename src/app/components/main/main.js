@@ -1,6 +1,8 @@
 'use client'
 import '../../../style/main.scss'
-import Cards from './cards';
+import assets from '../assets';
+import Cards from '../assets/cards/cards';
+
 
 export default function Main() {
   
@@ -10,14 +12,14 @@ export default function Main() {
         <h1 className="container_title">Coffee Stellar</h1>
         <p className="container-description">
           A cafeteria que vai te dar uma <br />
-          experiência interestelar
+          experiência interestelar!
         </p>
         <button className="know_btn">
-          Venha conhecer &lt;3
+          Venha conhecer {'<'}3
         </button>
       </article>
 
-      <Cards board={0}/>
+      <Cards images={assets.mainJs} hadHelp={true}/>
     </main>
   );
 }

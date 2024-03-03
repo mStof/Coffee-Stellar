@@ -13,7 +13,7 @@ export default function navbar() {
 
     return (
       <nav className="navbar">
-        <button className="nav_btn" onClick={handleClick}>
+        <button className="nav_btn" aria-label='Navbar-btn' onClick={handleClick}>
           <div>
             <span></span>
             <span></span>
@@ -21,13 +21,13 @@ export default function navbar() {
         </button>
         <ul className="nav_link_list">
           <li className="nav_links">
-            <a href="">Cardapio</a>
+            <a href="#">Cardapio</a>
           </li>
           <li className="nav_links">
-            <a href="">Onde estamos</a>
+            <a href="#locate">Onde estamos</a>
           </li>
           <li className="nav_links">
-            <a href="">Sobre nós</a>
+            <a href="#about-us">Sobre nós</a>
           </li>
         </ul>
         <div className="search_bar_container">
