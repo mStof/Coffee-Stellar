@@ -22,6 +22,7 @@ div.coffee_cup{
     }
     &:hover{
         scale: .90;
+        animation-play-state: paused;
     }
 
     &.active{
