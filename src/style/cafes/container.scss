@@ -49,6 +49,10 @@ article.menu_container{
             animation: rotate_orbit_1 var(--_rotation-time) linear infinite alternate;
             transition: opacity 200ms;
 
+            &:hover{
+                animation-play-state: paused;
+            }
+
             
 
             &:nth-of-type(7) {
@@ -110,7 +114,7 @@ article.menu_container{
             &.active{
                 opacity: 1;
                 z-index: 1;
-                animation: none;
+                animation-play-state: paused;
                 transform: translateX(50%) rotate(0deg);
             }
             &.disable{
