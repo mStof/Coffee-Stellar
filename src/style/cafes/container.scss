@@ -49,7 +49,7 @@ article.menu_container{
             animation: rotate_orbit_1 var(--_rotation-time) linear infinite alternate;
             transition: opacity 200ms;
 
-            &:hover{
+            &:has(div.coffee_cup:hover){
                 animation-play-state: paused;
             }
 
