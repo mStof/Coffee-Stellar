@@ -21,6 +21,7 @@ article.menu_container{
     div.coffee_container{
         margin-top: 10px;
         width: 100%;
+        max-width: 1240.8px;
         min-height: 550px;
         background-color: color.$thirdy-color;
         border-radius: 25px;
@@ -49,8 +50,10 @@ article.menu_container{
             animation: rotate_orbit_1 var(--_rotation-time) linear infinite alternate;
             transition: opacity 200ms;
 
-            
 
+            &:has(div.coffee_cup:hover){
+                animation-play-state: paused;
+            }
             &:nth-of-type(7) {
                 width: 35% * 2;
                 transform: translateX(50%) rotate(-33deg);
@@ -110,7 +113,7 @@ article.menu_container{
             &.active{
                 opacity: 1;
                 z-index: 1;
-                animation: none;
+                animation-play-state: paused;
                 transform: translateX(50%) rotate(0deg);
             }
             &.disable{

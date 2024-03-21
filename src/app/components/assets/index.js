@@ -43,14 +43,43 @@ import coffee4 from "../../../../public/img/coffee-img-4.jpg";
 const aboutUsJs = [coffee1, coffee2, coffee3, coffee4];
 
 // footer.js
-import logoFooter from '../../../../public/img/logo-footer.svg'
-import instagramFooter from '../../../../public/svg/footer-instagram.svg'
-import githubFooter from '../../../../public/svg/footer-github.svg'
-import linkedinFooter from '../../../../public/svg/footer-linkedin.svg'
+import logoFooter from "../../../../public/img/logo-footer.svg";
+import instagramFooter from "../../../../public/svg/footer-instagram.svg";
+import githubFooter from "../../../../public/svg/footer-github.svg";
+import linkedinFooter from "../../../../public/svg/footer-linkedin.svg";
+const footerJs = [logoFooter, instagramFooter, githubFooter, linkedinFooter];
 
-const footerJs = [logoFooter, instagramFooter, githubFooter, linkedinFooter]
+// Player.js
+import skipPrevious from "@material-design-icons/svg/round/skip_previous.svg";
+import pause from "@material-design-icons/svg/round/pause.svg";
+import skipNext from "@material-design-icons/svg/round/skip_next.svg";
+import play from "@material-design-icons/svg/round/play_arrow.svg";
+import mscCoverlessBook from "../../../../public/music/coverless-book.mp3";
+import mscGoodNight from "../../../../public/music/good-night.mp3";
+import mscLofiStudy from "../../../../public/music/lofi-study.mp3";
+import mscOnceInParis from "../../../../public/music/once-in-paris.mp3";
+import mscTvariTokyocCafe from "../../../../public/music/tvari-tokyo-cafe.mp3";
+const playerJs = [
+  skipNext,
+  pause,
+  skipPrevious,
+  play,
+  [
+    { src: mscCoverlessBook, name: "Coverless Book", },
+    { src: mscGoodNight, name: "Good Night", },
+    { src: mscLofiStudy, name: "Lofi Study", },
+    { src: mscOnceInParis, name: "Once in Paris" },
+    { src: mscTvariTokyocCafe, name: "Tvari Tokyo Cafe" },
+  ],
+];
 
-
-
-const assets = { aboutUsJs, locateJs, menuJs, starsJs, mainJs, footerJs };
+const assets = {
+  aboutUsJs,
+  locateJs,
+  menuJs,
+  starsJs,
+  mainJs,
+  footerJs,
+  playerJs,
+};
 export default assets;

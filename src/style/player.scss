@@ -1,0 +1,106 @@
+@use './style.scss' as color;
+
+div.player_container{
+    background-color: color.$secondy-color;
+    width: fit-content;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+    display: flex;
+    gap: 8px;
+    position: fixed;
+    inset: calc(16px + 50px + 8px) 0px 0px 64px;
+    z-index: 9;
+    transition: max-width 350ms, padding 350ms;
+
+    .player_btn{
+        background: none;
+        border: none;
+        border-radius:inherit ;
+        min-width: 50px;
+        padding: 8px 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        cursor: pointer;
+
+        > span {
+            background-color: #f5f5f5;
+            border-radius: 50px;
+            width: 3px;
+            height: 20%;
+            animation: music_movement 500ms linear infinite alternate;
+            pointer-events: none;
+
+            &:first-child{ animation-delay: 000ms; }
+            &:nth-child(2){ animation-delay: 250ms; }
+            &:nth-child(3){ animation-delay: 125ms; }
+            &:nth-child(4){ animation-delay: 250ms; }
+            &:last-child{ animation-delay: 000ms; }
+        }
+        &.paused{
+            > span {
+                animation-play-state: paused;
+            }
+        }
+    }
+    .player_info{
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        
+        p.music_name{
+            font-family: var(--besley-font);
+            color: #f5f5f5;
+            font-size: 1.5rem;
+            width: 13ch;
+            max-height: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        .music_btns{
+            display: flex;
+
+            .music_btn{
+                width: 2rem;
+                height: 2rem;
+                filter: invert(96%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 250ms, opacity 250ms;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            &:has(:hover) :not(:hover){
+                opacity: .65;
+            }
+        }
+    }
+
+    &.active{
+        padding-inline: 1rem;
+        // padding: 0rem .25rem 0 0;
+        max-width: 400px;
+
+        .player_info{
+            visibility: visible;    
+        }
+    }
+}
+@keyframes music_movement {
+    0%{
+        height: 20%;
+    }
+    100%{
+        height: 70%;
+    }
+}
