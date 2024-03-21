@@ -50,14 +50,6 @@ article.menu_container{
             animation: rotate_orbit_1 var(--_rotation-time) linear infinite alternate;
             transition: opacity 200ms;
 
-<<<<<<< HEAD
-=======
-            &:has(div.coffee_cup:hover){
-                animation-play-state: paused;
-            }
-
-            
->>>>>>> 8e97f1398433284051629d0f4b7c0edd9100a3ba
 
             &:has(div.coffee_cup:hover){
                 animation-play-state: paused;
