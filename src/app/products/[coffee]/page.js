@@ -18,7 +18,10 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 const getData = async (params) => {
-  const res = await fetch(`http://localhost:3000/api/${params.coffee}`);
+  if(!process.env.NEXT_PRODUCTION_URL){
+    return
+  }
+  const res = await fetch(`${process.env.NEXT_PRODUCTION_URL}/api/${params.coffee}`);
   const data = await res.json();
 
   return data;

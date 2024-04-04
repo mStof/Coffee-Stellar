@@ -7,7 +7,10 @@ export default function SearchBar() {
   const [result, setResult] = useState([]);
 
   const fetchData = async (value) => {
-    const data = await fetch("http://localhost:3000/api").then((res) =>
+    if(!process.env.NEXT_PRODUCTION_URL){
+      return
+    }
+    const data = await fetch(`${process.env.NEXT_PRODUCTION_URL}/api`).then((res) =>
       res.json()
     );
     const keys = Object.keys(data);
