@@ -18,16 +18,16 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 const getData = async (params) => {
-  if(!process.env.NEXT_PRODUCTION_URL){
-    return
-  }
   const res = await fetch(`${process.env.NEXT_PRODUCTION_URL}/api/${params.coffee}`);
   const data = await res.json();
-
+  
   return data;
 };
 
 export default async function page({ params }) {
+  if(!process.env.NEXT_PRODUCTION_URL){
+    return
+  }
   const coffee = await getData(params);
   const { id, name, description, lactose, cold, glutem, imgs, nutricionalTable } = coffee
 
