@@ -1,8 +1,8 @@
 import Cards from "../assets/cards/cards";
 import Image from "next/image";
 import assets from '../assets'
-import "../../../style/main.scss";
-import "../../../style/locate.scss";
+import "../../../style/index/main.scss";
+import "../../../style/index/locate.scss";
 
 export default function Locate() {
 

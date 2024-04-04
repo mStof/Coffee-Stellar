@@ -1,8 +1,8 @@
 // main.js
-import cafeImg1 from "../../../../public/img/cafe-1.png";
-import cafeImg2 from "../../../../public/img/cafe-2.png";
-import cafeImg3 from "../../../../public/img/cafe-3.png";
-import cafeImg4 from "../../../../public/img/cafe-4.png";
+import cafeImg1 from "../../../../public/img/cafe-1.webp";
+import cafeImg2 from "../../../../public/img/cafe-2.webp";
+import cafeImg3 from "../../../../public/img/cafe-3.webp";
+import cafeImg4 from "../../../../public/img/cafe-4.webp";
 const mainJs = [cafeImg1, cafeImg2, cafeImg3, cafeImg4];
 
 // menu.js
@@ -15,10 +15,10 @@ import starEmpty from "../../../../public/svg/empty-star.svg";
 const starsJs = [starEmpty, starFull];
 
 // locate.js
-import locateImg1 from "../../../../public/img/locate-1.png";
-import locateImg2 from "../../../../public/img/locate-2.png";
-import locateImg3 from "../../../../public/img/locate-3.png";
-import locateImg4 from "../../../../public/img/locate-4.png";
+import locateImg1 from "../../../../public/img/locate-1.webp";
+import locateImg2 from "../../../../public/img/locate-2.webp";
+import locateImg3 from "../../../../public/img/locate-3.webp";
+import locateImg4 from "../../../../public/img/locate-4.webp";
 
 import accessTime from "@material-design-icons/svg/round/access_time.svg";
 import pinDrop from "@material-design-icons/svg/outlined/pin_drop.svg";
@@ -36,10 +36,10 @@ const locateJs = [
 ];
 
 // aboutUs.js
-import coffee1 from "../../../../public/img/coffee-img-1.jpg";
-import coffee2 from "../../../../public/img/coffee-img-2.jpg";
-import coffee3 from "../../../../public/img/coffee-img-3.jpg";
-import coffee4 from "../../../../public/img/coffee-img-4.jpg";
+import coffee1 from "../../../../public/img/coffee-img-1.webp";
+import coffee2 from "../../../../public/img/coffee-img-2.webp";
+import coffee3 from "../../../../public/img/coffee-img-3.webp";
+import coffee4 from "../../../../public/img/coffee-img-4.webp";
 const aboutUsJs = [coffee1, coffee2, coffee3, coffee4];
 
 // footer.js

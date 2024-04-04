@@ -1,0 +1,24 @@
+.warpper_table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .table_title{
+        color: var(--thirdy-color);
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    .table_container{
+        background-color: var(--thirdy-color);
+        background-image: url(../../../../public/svg/bg-pattern.svg);
+        background-size: 150%;
+        background-blend-mode: overlay;
+        display: grid;
+        place-content: center;
+        width: max-content;
+        padding: 2rem 8rem;
+        border-radius: 15px;
+    }
+}

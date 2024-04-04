@@ -1,7 +1,7 @@
 "use client";
 import PropTypes from "prop-types";
 import Stars from "./stars";
-import "../../../style/cafes/cafes.scss";
+import "../../../style/index/cafes/cafes.scss";
 
 export default function Coffee({ id, coffeeName, ...coffeeCharacteristc }) {
   const coffeeCharacteristcArray = Object.keys(coffeeCharacteristc);

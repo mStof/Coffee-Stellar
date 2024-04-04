@@ -1,5 +1,5 @@
 'use client'
-import '../../../style/main.scss'
+import '../../../style/index/main.scss'
 import assets from '../assets';
 import Cards from '../assets/cards/cards';
 

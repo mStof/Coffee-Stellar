@@ -2,8 +2,7 @@
 import Image from "next/image";
 import HelpPicture from "./help";
 import { useEffect } from "react";
-import { GrPowerReset } from "react-icons/gr";
-import "../../../../style/cards/cards.scss";
+import "../../../../style/index/cards/cards.scss";
 
 export default function Cards({ images, hadHelp }) {
 

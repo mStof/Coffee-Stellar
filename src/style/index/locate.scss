@@ -5,6 +5,7 @@ div.locate_container{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-inline: calc(120px + 85px) 120px;
 
     &:target{

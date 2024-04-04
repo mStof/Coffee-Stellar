@@ -4,10 +4,11 @@ main.container_principal{
     align-self: center;
     width:100%;
     padding: 37px 0px;
-    padding-inline: 80px calc(80px + 85px);
+    padding-inline: min(10vw, 80px) calc(80px + 85px);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     margin-top: 80px;
 

@@ -1,0 +1,48 @@
+.table_nutricional{
+    border: 2px solid #f5f5f5;
+    color: var(--primary-color);
+    width: 450px;
+    border-spacing: 0;
+    text-align: center;
+    border-radius: 25px 25px 15px 15px;
+
+    .table_header_cel, .table_body_cel{
+        width: 50%;
+        padding: .5rem 0px;
+        border: 1px solid #f5f5f5;
+        font-weight: 400;
+        font-size: 2rem;
+    } 
+
+
+    .table_header{
+        background-color: var(--secondy-color);
+        height: 50px;
+        width: 50%;
+        border-radius: 25px 25px 0px 0px;
+        
+        .table_header_cel{
+            font-weight: 400;
+            font-size: 2rem;
+            
+            &:first-of-type { border-start-start-radius: 25px }
+            &:last-of-type { border-start-end-radius: 25px }
+        }
+    }
+    .table_body{
+        width: 50%;
+        border-radius: 0px 0px 15px 15px;
+        
+        .table_body_cel{
+            font-family: var(--besley-font);
+            font-size: 1rem;
+        }
+
+        tr:last-of-type{
+            & .table_body_cel {
+                &:first-of-type { border-end-start-radius: 15px }
+                &:last-of-type { border-end-end-radius: 15px }
+            }   
+        }
+    }
+}

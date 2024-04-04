@@ -1,6 +1,6 @@
 import assets from "./assets";
 import Cards from "./assets/cards/cards";
-import '../../style/aboutUs.scss'
+import '../../style/index/aboutUs.scss'
 
 export default function AboutUs() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import assets from "./assets";
 import Image from "next/image";
-import "../../style/player.scss";
+import "../../style/index/player.scss";
 import { useState } from "react";
 
 export default function Player() {

@@ -6,7 +6,7 @@ import Locate from './components/locate'
 import AboutUs from './components/aboutUs'
 import Footer from './components/footer'
 import Player from "./components/player";
-import "../style/style.scss"
+import "../style/index/style.scss"
 
 export default function Home() {
   return (

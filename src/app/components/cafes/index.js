@@ -1,4 +1,4 @@
-import '../../../style/cafes/container.scss'
+import '../../../style/index/cafes/container.scss'
 import CoffeeMenu from './menu'
 
 export default function Cafes() {

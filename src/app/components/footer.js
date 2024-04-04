@@ -1,6 +1,6 @@
 import assets from "./assets";
 import Image from "next/image";
-import '../../style/footer.scss'
+import '../../style/index/footer.scss'
 
 export default function Footer() {
   const [logo, instagram, github, linkedin] = assets.footerJs;
