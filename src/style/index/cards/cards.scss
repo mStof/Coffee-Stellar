@@ -24,7 +24,6 @@
         gap: 16px;
         padding: 64px 32px;
         transition: opacity 250ms;
-        cursor: pointer;
         
         .help_icon{
             font-size: 5rem;
@@ -36,6 +35,7 @@
             font-family: var(--besley-font);
             text-align: center;
             font-size: 1.25rem;
+            cursor: pointer;
             
         }
         p:last-of-type{

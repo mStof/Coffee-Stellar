@@ -42,12 +42,13 @@ export default function SearchBar() {
         );
       })
     );
+    console.log(result)
   };
 
   return (
     <form
       className="search_bar_container search_bar_open"
-      action={!result.length ? "" : `/products/${result[0].path}`}
+      action={!result.length ? "" : result[0].props.href}
     >
       <input
         type="text"
