@@ -19,13 +19,13 @@ export const dynamicParams = false;
 
 const getData = async (params) => {
   const data = await fetch(
-    `${process.env.NEXT_PRODUCTION_URL}/api/${params.coffee}`
+    `${process.env.NEXT_PUBLIC_URL}/api/${params.coffee}`
   ).then((res) => res.json());
   return data;
 };
 
 export default async function page({ params }) {
-  if (!process.env.NEXT_PRODUCTION_URL) {
+  if (!process.env.NEXT_PUBLIC_URL) {
     return;
   }
   const coffee = await getData(params);

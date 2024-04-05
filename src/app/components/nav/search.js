@@ -8,13 +8,13 @@ export default function SearchBar() {
 
   const fetchData = async (value) => {
     console.log("FetchData execting");
-    if (!process.env.NEXT_PRODUCTION_URL) {
-      console.log("NEXT_PRODUCTION_URL don't exist");
+    if (!process.env.NEXT_PUBLIC_URL) {
+      console.log("NEXT_PUBLIC_URL don't exist");
       console.log(process);
       return null;
     }
     const data = await fetch(
-      `${process.env.NEXT_PRODUCTION_URL}/api/search`
+      `${process.env.NEXT_PUBLIC_URL}/api/search`
     ).then((res) => res.json());
     console.log("Data:", data);
 
