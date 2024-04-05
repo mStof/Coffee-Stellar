@@ -7,39 +7,47 @@ export default function SearchBar() {
   const [result, setResult] = useState([]);
 
   const fetchData = async (value) => {
-    if(!process.env.NEXT_PRODUCTION_URL){
-      return
+    console.log("FetchData execting");
+    if (!process.env.NEXT_PRODUCTION_URL) {
+      console.log("NEXT_PRODUCTION_URL don't exist");
+      console.log(process);
+      return null;
     }
-    const data = await fetch(`${process.env.NEXT_PRODUCTION_URL}/api`).then((res) =>
-      res.json()
-    );
-    const keys = Object.keys(data);
+    const data = await fetch(
+      `${process.env.NEXT_PRODUCTION_URL}/api/search`
+    ).then((res) => res.json());
+    console.log("Data:", data);
 
-    const filterKeys = keys.filter((key) => {
-      const dataFilter = key.toLowerCase();
-      console.log(value)
-      return value && dataFilter.includes(value.toLowerCase());
+    const filterCoffees = data.filter((key) => {
+      const coffeeNames = key.name.toLowerCase();
+      return value && coffeeNames.includes(value.toLowerCase());
     });
+    console.log("filterCoffees:", filterCoffees);
+    return filterCoffees;
+  };
+  const handleSearch = async (e) => {
+    setInput(e.target.value);
+    const dataFilter = await fetchData(e.target.value);
+    if (dataFilter === null) return;
     setResult(
-      filterKeys.map((key) => {
+      dataFilter.map((coffee) => {
         return (
-          <Link href={`/products/${key}`} className="result" key={key}>
-            {data[key].name}
+          <Link
+            href={`/products/${coffee.path}`}
+            className="result"
+            key={coffee.id}
+          >
+            {coffee.name}
           </Link>
         );
       })
     );
-    console.log(result);
-  };
-  const handleSearch = (e) => {
-    setInput(e.target.value);
-    fetchData(e.target.value);
   };
 
   return (
     <form
       className="search_bar_container search_bar_open"
-      action="/products/test"
+      action={!result.length ? "" : `/products/${result[0].path}`}
     >
       <input
         type="text"

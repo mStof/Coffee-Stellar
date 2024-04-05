@@ -18,24 +18,38 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 const getData = async (params) => {
-  const res = await fetch(`${process.env.NEXT_PRODUCTION_URL}/api/${params.coffee}`);
-  const data = await res.json();
-  
+  const data = await fetch(
+    `${process.env.NEXT_PRODUCTION_URL}/api/${params.coffee}`
+  ).then((res) => res.json());
   return data;
 };
 
 export default async function page({ params }) {
-  if(!process.env.NEXT_PRODUCTION_URL){
-    return
+  if (!process.env.NEXT_PRODUCTION_URL) {
+    return;
   }
   const coffee = await getData(params);
-  const { id, name, description, lactose, cold, glutem, imgs, nutricionalTable } = coffee
+  const {
+    id,
+    name,
+    description,
+    lactose,
+    cold,
+    glutem,
+    imgs,
+    nutricionalTable,
+  } = coffee;
 
   return (
     <>
       <Navbar />
       <Player />
-      <CoffeeHeader title={name} lactose={lactose} cold={cold} glutem={glutem} />
+      <CoffeeHeader
+        title={name}
+        lactose={lactose}
+        cold={cold}
+        glutem={glutem}
+      />
       <CoffeeInfos description={description} imgs={imgs} />
       <CoffeeTable nutricionalTableData={nutricionalTable} />
       <Footer />
