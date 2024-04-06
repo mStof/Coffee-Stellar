@@ -1,4 +1,5 @@
 import { Lobster, Besley } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights'
 
 const lobster = Lobster({
   weight: "400",
@@ -22,7 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={`${lobster.variable} ${besley.variable}`}>
-      <body className={lobster.className}>{children}</body>
+      <body className={lobster.className}>
+        {children}
+        <SpeedInsights/>
+      </body>
     </html>
   );
 }
