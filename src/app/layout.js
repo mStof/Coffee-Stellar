@@ -1,5 +1,5 @@
 import { Lobster, Besley } from "next/font/google";
-import { SpeedInsights } from '@vercel/speed-insights'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const lobster = Lobster({
   weight: "400",
