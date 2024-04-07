@@ -7,22 +7,16 @@ export default function SearchBar() {
   const [result, setResult] = useState([]);
 
   const fetchData = async (value) => {
-    console.log("FetchData execting");
-    if (!process.env.NEXT_PUBLIC_URL) {
-      console.log("NEXT_PUBLIC_URL don't exist");
-      console.log(process);
-      return null;
-    }
-    const data = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/api/search`
-    ).then((res) => res.json());
-    console.log("Data:", data);
+    if (!process.env.NEXT_PUBLIC_URL) return null;
+    const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/search`).then(
+      (res) => res.json()
+    );
 
     const filterCoffees = data.filter((key) => {
       const coffeeNames = key.name.toLowerCase();
       return value && coffeeNames.includes(value.toLowerCase());
     });
-    console.log("filterCoffees:", filterCoffees);
+
     return filterCoffees;
   };
   const handleSearch = async (e) => {
@@ -33,22 +27,25 @@ export default function SearchBar() {
       dataFilter.map((coffee) => {
         return (
           <Link
-            href={`/products/${coffee.path}`}
-            className="result"
             key={coffee.id}
+            className="result"
+            href={`/products/${coffee.path}`}
+            tabIndex="0"
+            aria-label={`Página do ${coffee.name}`}
           >
             {coffee.name}
           </Link>
         );
       })
     );
-    console.log(result)
   };
 
   return (
     <form
       className="search_bar_container search_bar_open"
       action={!result.length ? "" : result[0].props.href}
+      id="search_bar"
+      name="search_bar"
     >
       <input
         type="text"
@@ -56,8 +53,14 @@ export default function SearchBar() {
         placeholder="Qual café hoje?"
         value={input}
         onChange={handleSearch}
+        required
       />
-      <button className="btn_search_bar">
+      <button
+        type="button"
+        className="btn_search_bar"
+        aria-label="Pesquisar"
+        title="Botão da barra de pesquisa"
+      >
         <TbSearch />
       </button>
       <div className="result_container">{result}</div>

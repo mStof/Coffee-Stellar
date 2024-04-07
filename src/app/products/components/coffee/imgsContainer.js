@@ -31,7 +31,10 @@ export default function ImgsContainer({ imgs }) {
       <dialog id="modalScreen">
         <form method="dialog">
           <button
+            type="submit"
             className="close_dialog"
+            aria-label='Fechar modal'
+            title='Botão para fechar o modal'
             onClick={() =>
               (document.documentElement.style.overflowY = "scroll")
             }

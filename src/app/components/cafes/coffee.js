@@ -24,7 +24,7 @@ export default function Coffee({ id, coffeeName, ...coffeeCharacteristc }) {
   };
 
   return (
-    <div className="coffee_cup" onClick={handleClick}>
+    <div className="coffee_cup_orbit" onClick={handleClick}>
       <div className="coffee_info_container">
         <h2>{coffeeName}</h2>
         {coffeeCharacteristcArray.map((key) => {

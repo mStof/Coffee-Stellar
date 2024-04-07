@@ -3,6 +3,8 @@ import isCold from "@/../public/svg/cold-icon.svg";
 import lactoseIcon from "@/../public/svg/lactose-icon.svg";
 import Image from "next/image";
 
+// Adicionar a parte de src, alt e o title no banco de dados, para só dps implementar aqui.
+
 export default function IconsHeader({ lactose, cold, gluten }) {
   return (
     <div className="icons_container">

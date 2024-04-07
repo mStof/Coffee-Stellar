@@ -9,9 +9,9 @@
     position: relative;
     
     .help_picture{
+        background-color: rgba(0, 0, 0, 0.65);
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.65);
         backdrop-filter: blur(3px);
         border-radius: 25px;
         outline: 5px solid #f5f5f5;
@@ -21,8 +21,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 16px;
-        padding: 64px 32px;
+        gap: 1rem;
+        padding: 4rem 2rem;
+        cursor: pointer;
         transition: opacity 250ms;
         
         .help_icon{
@@ -35,7 +36,6 @@
             font-family: var(--besley-font);
             text-align: center;
             font-size: 1.25rem;
-            cursor: pointer;
             
         }
         p:last-of-type{
@@ -52,12 +52,12 @@
                 height: 4px;
                 border-radius: 50px;
                 background-color: #f5f5f5;
-                scale: 0 1;
-                transition: scale 300ms;
+                transform: scaleX(0);
+                transition: transform 300ms;
                 
             }
             &:hover::before{
-                scale: 1 1;
+                transform: scaleX(1);
             }
         }
 

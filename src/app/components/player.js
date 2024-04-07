@@ -11,7 +11,7 @@ export default function Player() {
   function handleClickPause(e) {
     const musicTag = document.querySelector("audio#music");
     const musicIndicator = document.querySelector("button.player_btn");
-    
+
     if(e === "reset"){
       document.querySelector(".music_pause").alt = "Botão de pausar a musica";
       document.querySelector(".music_pause").src = play.src;
@@ -36,7 +36,7 @@ export default function Player() {
     }
   }
   const constrolsFunctions = {
-    musicPrevious: (e) => {
+    musicPrevious: () => {
       0 <= mscList.indexOf(musicObj) - 1
         ? setMusicObj(mscList[mscList.indexOf(musicObj) - 1])
         : setMusicObj(mscList[mscList.length - 1]);
@@ -55,6 +55,8 @@ export default function Player() {
       <button
         type="button"
         className="player_btn paused"
+        aria-label='Player de música'
+        title='Botão do player de música'
         onClick={(e) => e.target.parentElement.classList.toggle("active")}
       >
         <span></span>
@@ -73,21 +75,24 @@ export default function Player() {
             className="music_btn music_previous"
             id="musicPrevious"
             src={skipPrevious}
-            alt="Botão de musica anterior"
-            onClick={(e) => constrolsFunctions[e.target.id](e)}
+            alt="Botão de música anterior"
+            onClick={(e) => constrolsFunctions[e.target.id]()}
+            tabIndex={0}
           />
           <Image
             className="music_btn music_pause"
             src={play}
-            alt="Botão de pausar a musica"
+            alt="Botão de pausar a música"
             onClick={handleClickPause}
+            tabIndex={0}
           />
           <Image
             className="music_btn music_next"
             id="musicNext"
             src={skipNext}
-            alt="Botão de próxima musica"
+            alt="Botão de próxima música"
             onClick={(e) => constrolsFunctions[e.target.id]()}
+            tabIndex={0}
           />
         </div>
       </div>

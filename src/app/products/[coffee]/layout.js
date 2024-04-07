@@ -1,14 +1,12 @@
 export async function generateMetadata({ params, searchParams }, parent) {
+    const titleName = params.coffee.replace(/-/g, " ")
+  
     return {
-      title: params.coffee,
-      description: `Descrição do café ${params.coffee} | Coffee Stellar`,
+      title: titleName,
+      description: `Descrição do café ${titleName} | Coffee Stellar`,
     }
   }
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="pt-br" >
-      <body>{children}</body>
-    </html>
-  )
+export default function CoffeePageLayout({ children }) {
+  return <main className="main_container">{children}</main>
 }
