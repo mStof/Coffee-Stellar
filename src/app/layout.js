@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={`${lobster.variable} ${besley.variable}`} >
-      <body className={lobster.className}>
+      <body>
         {children}
         <SpeedInsights/>
       </body>

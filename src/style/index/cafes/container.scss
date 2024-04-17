@@ -20,10 +20,12 @@ article.menu_container{
     }
     div.coffee_container{
         margin-top: 10px;
+        background-color: color.$thirdy-color;
+        background-image: url(../../../../public/svg/bg-pattern.svg);
+        background-blend-mode: overlay;
         width: 100%;
         max-width: 1240.8px;
         min-height: 550px;
-        background-color: color.$thirdy-color;
         border-radius: 25px;
         display: flex;
         align-items: center;
@@ -41,7 +43,7 @@ article.menu_container{
             width: 25% * 2;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            border: 4px solid #f5f5f5;
+            border: 4px solid rgba(245, 245, 245, .65);
             transform: translateX(50%) rotate(-50deg);
             display: flex;
             align-items: center;
@@ -51,15 +53,16 @@ article.menu_container{
             transition: opacity 200ms;
 
 
-            &:has(div.coffee_cup:hover){
+            &:has(div.coffee_cup_orbit:hover){
                 animation-play-state: paused;
+                div.coffee_info_container { visibility: visible; opacity: 1; }
             }
             &:nth-of-type(7) {
                 width: 35% * 2;
                 transform: translateX(50%) rotate(-33deg);
                 animation: rotate_orbit_2 var(--_rotation-time) 1.5s linear infinite alternate;
 
-                div.coffee_cup { animation-delay: 1.5s; }
+                div.coffee_cup_orbit { animation-delay: 1.5s; }
             }
             
             &:nth-of-type(6) {
@@ -67,7 +70,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-25deg);
                 animation: rotate_orbit_3 var(--_rotation-time) .5s linear infinite alternate;
                 
-                div.coffee_cup { animation-delay: .5s; }
+                div.coffee_cup_orbit { animation-delay: .5s; }
             }
             
             &:nth-of-type(5) {
@@ -75,7 +78,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-20deg);
                 animation: rotate_orbit_4 var(--_rotation-time) 3s linear infinite alternate;
                 
-                div.coffee_cup { animation-delay: 3s; }
+                div.coffee_cup_orbit { animation-delay: 3s; }
             }
             
             &:nth-of-type(4) {
@@ -83,7 +86,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-17deg);
                 animation: rotate_orbit_5 var(--_rotation-time) 2s linear infinite alternate;
                 
-                div.coffee_cup { animation-delay: 2s; }
+                div.coffee_cup_orbit { animation-delay: 2s; }
             }
             
             &:nth-of-type(3) {
@@ -91,7 +94,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-14.5deg);
                 animation: rotate_orbit_6 var(--_rotation-time) 3.5s linear infinite alternate;
                 
-                div.coffee_cup { animation-delay: 3.5s; }
+                div.coffee_cup_orbit { animation-delay: 3.5s; }
             }
             
             &:nth-of-type(2) {
@@ -99,7 +102,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-13deg);
                 animation: rotate_orbit_7 var(--_rotation-time) 1s linear infinite alternate;
                 
-                div.coffee_cup { animation-delay: 1s; }
+                div.coffee_cup_orbit { animation-delay: 1s; }
             }
             
             &:first-of-type {
@@ -107,7 +110,7 @@ article.menu_container{
                 transform: translateX(50%) rotate(-11.5deg);
                 animation: rotate_orbit_8 var(--_rotation-time) linear infinite alternate;
 
-                div.coffee_cup { animation-delay: 2.5s; }
+                div.coffee_cup_orbit { animation-delay: 2.5s; }
             }
 
             &.active{

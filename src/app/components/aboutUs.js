@@ -14,7 +14,7 @@ export default function AboutUs() {
         quod maxime non vero, molestiae nam! Officiis hic maiores cumque facere
         placeat pariatur debitis iusto, dolores est.
       </p>
-      <Cards images={assets.aboutUsJs} hadHelp={false} />
+      <Cards images={assets.aboutUsJs} hadHelp={false} preload={false}/>
     </div>
   );
 }

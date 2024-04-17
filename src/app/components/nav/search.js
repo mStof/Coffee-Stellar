@@ -16,7 +16,7 @@ export default function SearchBar() {
       const coffeeNames = key.name.toLowerCase();
       return value && coffeeNames.includes(value.toLowerCase());
     });
-
+    console.log(filterCoffees)
     return filterCoffees;
   };
   const handleSearch = async (e) => {

@@ -19,7 +19,7 @@ export default function Main() {
         </button>
       </article>
 
-      <Cards images={assets.mainJs} hadHelp={true}/>
+      <Cards images={assets.mainJs} hadHelp={true} preload={true}/>
     </main>
   );
 }

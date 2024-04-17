@@ -18,16 +18,24 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 const getData = async (params) => {
-  const data = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/${params.coffee}`
-  ).then((res) => res.json());
-  return data;
+  if (!process.env.NEXT_PUBLIC_URL) {
+    const data = await fetch(`localhost:3000/api/${params.coffee}`)
+    .then((res) => res.json());
+    return data;
+  }
+  else{
+    const data = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/${params.coffee}`
+    ).then((res) => res.json());
+    return data;
+  }
+
 };
 
 export default async function page({ params }) {
-  if (!process.env.NEXT_PUBLIC_URL) {
-    return;
-  }
+  // if (!process.env.NEXT_PUBLIC_URL) {
+  //   return;
+  // }
   const coffee = await getData(params);
   const {
     id,

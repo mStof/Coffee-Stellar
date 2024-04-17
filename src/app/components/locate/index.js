@@ -12,7 +12,7 @@ export default function Locate() {
   
   return (
     <div className="locate_container" id="locate">
-      <Cards images={cafeImg} hadHelp={false}/>
+      <Cards images={cafeImg} hadHelp={false} preload={false}/>
       <div className="locate_info">
         <h2>Onde estamos</h2>
         <ul className="locate_local">

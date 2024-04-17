@@ -6,25 +6,29 @@ import "../../../style/index/cafes/cafes.scss";
 export default function Coffee({ id, coffeeName, ...coffeeCharacteristc }) {
   const coffeeCharacteristcArray = Object.keys(coffeeCharacteristc);
 
-  const handleClick = (e) => {
+  const handleHover = (e, getOut) => {
     const thisCoffee = e.target;
-    const thisOrbit = thisCoffee.parentNode;
-    const orbitContainer = document.querySelector('.coffee_container');
+    const thisOrbit = thisCoffee.parentNode.parentNode;
+    const orbitContainer = document.querySelector(".coffee_container");
 
     orbitContainer.childNodes.forEach((orbits) => {
       if (orbits.firstChild !== null) {
-        orbits.firstChild.classList.remove("disable", "active");
-        orbits.classList.remove("disable", "active");
+        orbits.classList.remove("disable");
 
-        const state = orbits !== thisOrbit ? "disable" : "active";
-        orbits.firstChild.classList.toggle(state);
-        orbits.classList.toggle(state);
+        if (getOut) return;
+
+        if (orbits === thisOrbit) return;
+        orbits.classList.add("disable");
       }
     });
   };
 
   return (
-    <div className="coffee_cup_orbit" onClick={handleClick}>
+    <div
+      className="coffee_cup_orbit"
+      onMouseEnter={(e) => handleHover(e, false)}
+      onMouseLeave={(e) => handleHover(e, true)}
+    >
       <div className="coffee_info_container">
         <h2>{coffeeName}</h2>
         {coffeeCharacteristcArray.map((key) => {

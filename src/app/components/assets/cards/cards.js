@@ -4,7 +4,7 @@ import HelpPicture from "./help";
 import { useEffect } from "react";
 import "../../../../style/index/cards/cards.scss";
 
-export default function Cards({ images, hadHelp }) {
+export default function Cards({ images, hadHelp, preload }) {
 
   useEffect(() => {
     const hammerFunction = async () => {
@@ -110,7 +110,7 @@ export default function Cards({ images, hadHelp }) {
         }
         push(card) {
           this.board.insertAdjacentElement('afterbegin', card)
-          card.style = ''
+          card.style = 'position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent'
         }
       }
       const boards = document.querySelectorAll(".pictures_list");
@@ -132,7 +132,13 @@ export default function Cards({ images, hadHelp }) {
               className="coffee_pictures"
               src={image}
               alt="Imagem do café"
-              priority
+              // width={300}
+              // height={450}
+              priority={preload}
+              as="image"
+              fill
+              sizes="(max-width: 350px) 75vw, 100vw"
+              loading={preload ? "eager" : "lazy"} 
             />
           );
         })}
