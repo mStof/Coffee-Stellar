@@ -8,6 +8,7 @@ import Footer from './components/footer'
 import Player from "./components/player";
 import "../style/index/style.scss"
 
+
 export default function Home() {
   return (
     <div className="container">

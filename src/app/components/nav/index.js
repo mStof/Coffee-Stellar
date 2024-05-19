@@ -34,7 +34,7 @@ export default function Navbar() {
       </button>
       <ul className="nav_link_list">
         <li className="nav_links">
-          <Link href="#">Cardapio</Link>
+          <Link href="/cardapio">Cardapio</Link>
         </li>
         <li className="nav_links">
           <Link scroll={false} href="/#locate">Onde estamos</Link>

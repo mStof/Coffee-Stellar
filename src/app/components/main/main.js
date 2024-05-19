@@ -1,8 +1,6 @@
-'use client'
 import '../../../style/index/main.scss'
 import assets from '../assets';
 import Cards from '../assets/cards/cards';
-
 
 export default function Main() {
   

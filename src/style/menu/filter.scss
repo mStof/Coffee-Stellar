@@ -1,0 +1,134 @@
+.filter_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 80px;
+    min-width: 250px;
+    
+    h2.filter_title{
+        font-family: var(--lobster-font);
+        color: var(--thirdy-color);
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    .filter_options{
+        background-color: var(--secondy-color);
+        max-width: 250px;
+        padding: 0rem 1rem 0rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        // gap: .5rem;
+        position: relative;
+        top: -1rem;
+        
+        h2{
+            font-family: var(--besley-font);
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #f5f5f5;
+            margin-left: .5rem;
+        }
+        span{
+            width: 100%;
+            height: 4px;
+            background-color: #f5f5f5;
+            border-radius: 50px;
+            position: relative;
+            display: block;
+        }
+        > div{
+            margin-bottom: 1rem;
+            margin-top: 4px;
+        }
+        .type_list{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            .type_iten{
+                color: var(--secondy-color);
+                background-color: #f5f5f5;
+                padding: 0px 12px 1px;
+                border-radius: 90px;
+                font-size: 1rem;
+                font-family: var(--besley-font);
+                cursor: pointer;
+                transition: transform 250ms, opacity 250ms, background-color 250ms, color 250ms;
+                
+                &:has(svg) {
+                    display: flex;
+                    padding: .25rem;
+                    border-radius: 50%;
+                    
+                    * {
+                        transition: fill 250ms, stroke 250ms;
+                        pointer-events: none;
+                    }
+                    &.active svg circle ~ path, &.active svg line + path{
+                        fill: #282633;
+                    }
+                    &.active svg circle ~ path[stroke],
+                    &.active svg circle ~ line[stroke], 
+                    &.active svg circle, &.active svg circle + line {
+                        stroke: #f5f5f5;
+                   }
+                    &.active svg path[clip-rule],
+                    &.active svg path[mask],
+                    &.active svg > path {
+                        fill: #f5f5f5;
+                    }
+                }
+
+
+                &.active{
+                    --secondy-color:#f5f5f5;
+                    background-color: var(--thirdy-color);
+                }
+            }
+            &:has(:hover) > :not(:hover){
+                transform: scale(.9);
+                opacity: .75;
+                
+            }
+        }
+        .search_bar_container{
+            input{
+                width: 100%;
+                padding-inline: 1rem;
+                border-radius: 50px;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                font-family: var(--besley-font);
+            }
+        }
+        .price_container{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .prices_input{
+                display: flex;
+                justify-content: space-between;
+                font-size: 1rem;
+                font-family: var(--besley-font);
+                color: #f5f5f5;
+                input{
+                    font-size: 1rem;
+                    font-family: var(--besley-font);
+                    display: inline;
+                    max-width: 75px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+    
+                }
+            }
+        }
+    }
+}

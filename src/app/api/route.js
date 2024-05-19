@@ -3,6 +3,8 @@ import img2 from "@/../public/img/cafe-2.webp";
 import img3 from "@/../public/img/cafe-3.webp";
 import img4 from "@/../public/img/cafe-4.webp";
 
+// TODO: Fazer o campo de preço;
+
 export async function GET(resquest) {
   const imgsCoffeeEarth = [img1, img2, img3, img4];
   const data = [
@@ -10,6 +12,7 @@ export async function GET(resquest) {
       id: 1,
       path:"CoffeEarth",
       name: "CoffeEarth",
+      price:  9.99,
       description:
         "Apresentamos CoffeEarth: uma experiência de café que captura os sabores distintos e a diversidade do nosso planeta Terra. Cada gole é uma viagem sensorial, com blends exclusivos que celebram as maravilhas naturais ao redor do mundo. Descubra o sabor da sustentabilidade em cada xícara.",
       lactose: false,
@@ -33,6 +36,7 @@ export async function GET(resquest) {
       id: 2,
       path:"Venusian-Velvet-Smoothie",
       name: "Venusian Velvet Smoothie",
+      price: 14.99,
       description:
         "Explore os mistérios do cosmos com nosso Venusian Velvet Smoothie. Uma fusão celestial de sabores exóticos, este smoothie transporta você para os encantos do planeta Venus. Com uma base cremosa de frutas tropicais, como manga e maracujá, combinada com um toque suave de coco, cada gole é uma jornada sensorial pelo cosmos.",
       lactose: false,
@@ -56,6 +60,7 @@ export async function GET(resquest) {
       id: 3,
       path:"Mercurial-Mist-Tea",
       name: "Mercurial Mist Tea",
+      price: 10.99,
       description:
         "Mergulhe nos mistérios do cosmos com o Mercurial Mist Tea. Esta infusão celestial transporta você para as paisagens enigmáticas do planeta Mercúrio. Com uma base de chá verde delicado, esta bebida é infundida com a essência revigorante de ervas exóticas e notas cítricas.",
       lactose: false,
@@ -79,6 +84,7 @@ export async function GET(resquest) {
       id: 4,
       path:"Saturnian-Spice-Latte",
       name: "Saturnian Spice Latte",
+      price: 12.99,
       description:
         "Transporte-se para os confins do sistema solar com o Saturnian Spice Latte. Esta criação celestial é uma homenagem à beleza imponente e enigmática do planeta dos anéis. Cada gole é uma jornada sensorial através de camadas de espresso encorpado, leite cremoso e uma mistura secreta de especiarias exóticas.",
       lactose: false,
@@ -102,6 +108,7 @@ export async function GET(resquest) {
       id: 5,
       path:"Marsian-Mocha-Bliss",
       name: "Marsian Mocha Bliss",
+      price: 13.99,
       description:
         "Deleite-se com o Marsian Mocha Bliss, uma experiência celestial que o transportará para os terrenos vermelhos e misteriosos do planeta Marte. Este chocolate quente exuberante é uma fusão divina de cacau rico e sedutor, combinado com espresso encorpado e uma pitada de especiarias exóticas.",
       lactose: false,

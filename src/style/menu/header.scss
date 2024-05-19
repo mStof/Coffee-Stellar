@@ -1,0 +1,20 @@
+.header_menu{
+    background-color: var(--thirdy-color);
+    width: max(55%, 120px);
+    min-height: auto;
+    padding: calc(2.5rem - 24px);
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    
+    h1{
+        color: var(--primary-color);
+        font-size: 6rem;
+        font-family: var(--lobster-font);
+        font-weight: 400;
+        isolation: isolate;
+    }
+}
